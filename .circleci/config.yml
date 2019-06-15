@@ -68,6 +68,8 @@ jobs:
       - run: npm run electron:build
 
   release:
+    docker:
+      - image: circleci/node:10
     steps:
       - run: echo "hello world"
 
