@@ -38,30 +38,30 @@ jobs:
       - run: npm test
       - run: ./node_modules/.bin/codecov
       - save_cache: *save-deps-cache
+  windowsbuild:
+    <<: *defaults
+    docker:
+      - image: electronuserland/builder:wine
+  macbuild:
+    <<: *defaults
+    macos:
+      xcode: "10.0.0"
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run electron:build
 
-  build:
+  linuxbuild:
     <<: *defaults
     docker:
       - image: circleci/node:10
     steps:
       - checkout
-      - restore_cache: *restore-deps-cache
       - run: npm install
-      - run: npm run build
-      - save_cache: *save-deps-cache
-
+      - run: npm run electron:build
   release:
-    <<: *defaults
-    docker:
-      - image: circleci/node:10
     steps:
-      - checkout
-      - restore_cache: *restore-deps-cache
-      - run: npm install
-      - run: npm run build
-      - run: npm install semantic-release @semantic-release/changelog @semantic-release/git @semantic-release/github @semantic-release/npm @semantic-release/commit-analyzer @semantic-release/release-notes-generator @qiwi/semantic-release-gh-pages-plugin
-      - run: ./node_modules/.bin/semantic-release
-      - save_cache: *save-deps-cache
+      - run: echo "hello world"
 
 workflows:
   version: 2
@@ -78,6 +78,10 @@ workflows:
           filters: *filter-only-master
       - build:
           filters: *filter-only-master
+          requires:
+            - windowsbuild
+            - macbuild
+            - linuxbuild
       - hold:
           filters: *filter-only-master
           type: approval
