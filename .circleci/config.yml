@@ -47,7 +47,6 @@ jobs:
     steps:
       - checkout
       - run:
-      - run:
         name: "Setup custom environment variables"
         command: |
           echo 'export APP_VERSION_GIT_TAG=$(cat package.json | grep version | head -1 | awk -F: "{ print $2 }" | sed "s/[\",]//g")' >> $BASH_ENV # Redirect MY_ENV_VAR into $BASH_ENV
