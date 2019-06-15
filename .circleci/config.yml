@@ -81,6 +81,12 @@ workflows:
     jobs:
       - test:
           filters: *filter-only-master
+      - windowsbuild:
+          filters: *filter-only-master
+      - macbuild:
+          filters: *filter-only-master
+      - linuxbuild:
+          filters: *filter-only-master
       - hold:
           filters: *filter-only-master
           type: approval
