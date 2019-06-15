@@ -4,6 +4,7 @@
 
 This is a starting place for an electron menubar application based on typescript and pristine.
 
+![image](https://user-images.githubusercontent.com/364566/59548900-1ff36300-8f0a-11e9-8987-d0160c6f4d81.png)
 
 ## Usage
 
