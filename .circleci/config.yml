@@ -26,6 +26,7 @@ defaults: &defaults
   working_directory: ~/project
 
 jobs:
+
   test:
     <<: *defaults
     docker:
@@ -38,6 +39,7 @@ jobs:
       - run: npm test
       - run: ./node_modules/.bin/codecov
       - save_cache: *save-deps-cache
+
   windowsbuild:
     <<: *defaults
     docker:
@@ -46,6 +48,7 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run electron:build
+
   macbuild:
     <<: *defaults
     macos:
@@ -54,6 +57,7 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run electron:build
+
   linuxbuild:
     <<: *defaults
     docker:
@@ -62,6 +66,7 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run electron:build
+
   release:
     steps:
       - run: echo "hello world"
@@ -72,9 +77,6 @@ workflows:
     jobs:
       - test:
           filters: *filter-only-semantic-pr
-      - build:
-          filters: *filter-only-semantic-pr
-
   release:
     jobs:
       - test:
