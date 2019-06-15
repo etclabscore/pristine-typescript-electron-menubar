@@ -46,6 +46,11 @@ jobs:
       - image: electronuserland/builder:wine
     steps:
       - checkout
+      - run:
+      - run:
+        name: "Setup custom environment variables"
+        command: |
+          echo 'export APP_VERSION_GIT_TAG=$(cat package.json | grep version | head -1 | awk -F: "{ print $2 }" | sed "s/[\",]//g")' >> $BASH_ENV # Redirect MY_ENV_VAR into $BASH_ENV
       - run: npm install
       - run: npm run electron:build
 
@@ -55,6 +60,10 @@ jobs:
       xcode: "10.0.0"
     steps:
       - checkout
+      - run:
+        name: "Setup custom environment variables"
+        command: |
+          echo 'export APP_VERSION_GIT_TAG=$(cat package.json | grep version | head -1 | awk -F: "{ print $2 }" | sed "s/[\",]//g")' >> $BASH_ENV # Redirect MY_ENV_VAR into $BASH_ENV
       - run: npm install
       - run: npm run electron:build
 
@@ -64,6 +73,10 @@ jobs:
       - image: circleci/node:10
     steps:
       - checkout
+      - run:
+        name: "Setup custom environment variables"
+        command: |
+          echo 'export APP_VERSION_GIT_TAG=$(cat package.json | grep version | head -1 | awk -F: "{ print $2 }" | sed "s/[\",]//g")' >> $BASH_ENV # Redirect MY_ENV_VAR into $BASH_ENV
       - run: npm install
       - run: npm run electron:build
 
