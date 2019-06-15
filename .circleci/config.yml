@@ -54,7 +54,6 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run electron:build
-
   linuxbuild:
     <<: *defaults
     docker:
@@ -80,18 +79,14 @@ workflows:
     jobs:
       - test:
           filters: *filter-only-master
-      - build:
-          filters: *filter-only-master
-          requires:
-            - windowsbuild
-            - macbuild
-            - linuxbuild
       - hold:
           filters: *filter-only-master
           type: approval
           requires:
             - test
-            - build
+            - windowsbuild
+            - macbuild
+            - linuxbuild
       - release:
           filters: *filter-only-master
           requires:
