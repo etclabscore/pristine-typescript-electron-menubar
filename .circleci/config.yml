@@ -42,6 +42,10 @@ jobs:
     <<: *defaults
     docker:
       - image: electronuserland/builder:wine
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run electron:build
   macbuild:
     <<: *defaults
     macos:
