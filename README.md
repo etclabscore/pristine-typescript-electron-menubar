@@ -8,13 +8,13 @@ This is a starting place for an electron menubar application based on typescript
 ## Usage
 
 ### Development
-`npm start`
-`npm run electron`
 
+- `npm start`
+- `npm run electron`
 
 ### Production
-`npm run build`
-`npm run electron:build`
+
+- `npm run electron:build`
 
 ## Getting Started
 
