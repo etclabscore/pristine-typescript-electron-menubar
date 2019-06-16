@@ -47,9 +47,9 @@ jobs:
     steps:
       - checkout
       - run:
-        name: "Setup custom environment variables"
-        command: |
-          echo 'export APP_VERSION_GIT_TAG=$(npm run --silent version)' >> $BASH_ENV # Redirect MY_ENV_VAR into $BASH_ENV
+          name: "Setup custom environment variables"
+          command: |
+            echo 'export APP_VERSION_GIT_TAG=$(npm run --silent version)' >> $BASH_ENV # Redirect MY_ENV_VAR into $BASH_ENV
       - run: npm install
       - run: npm run electron:build
 
@@ -60,9 +60,9 @@ jobs:
     steps:
       - checkout
       - run:
-        name: "Setup custom environment variables"
-        command: |
-          echo 'export APP_VERSION_GIT_TAG=$(npm run --silent version)' >> $BASH_ENV # Redirect MY_ENV_VAR into $BASH_ENV
+          name: "Setup custom environment variables"
+          command: |
+            echo 'export APP_VERSION_GIT_TAG=$(npm run --silent version)' >> $BASH_ENV # Redirect MY_ENV_VAR into $BASH_ENV
       - run: npm install
       - run: npm run electron:build
 
@@ -73,9 +73,9 @@ jobs:
     steps:
       - checkout
       - run:
-        name: "Setup custom environment variables"
-        command: |
-          echo 'export APP_VERSION_GIT_TAG=$(npm run --silent version)' >> $BASH_ENV # Redirect MY_ENV_VAR into $BASH_ENV
+          name: "Setup custom environment variables"
+          command: |
+            echo 'export APP_VERSION_GIT_TAG=$(npm run --silent version)' >> $BASH_ENV # Redirect MY_ENV_VAR into $BASH_ENV
       - run: npm install
       - run: npm run electron:build
 
