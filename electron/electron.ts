@@ -7,6 +7,6 @@ const mb = menubar({
     : `file://${path.join(__dirname, "../build/index.html")}`,
 });
 
-mb.app.on("ready", () => {
+mb.on("ready", () => {
   console.log("app is ready") //tslint:disable-line
 });
