@@ -1,3 +1,12 @@
+## [1.0.9](https://github.com/etclabscore/pristine-typescript-electron-menubar/compare/1.0.8...1.0.9) (2019-06-20)
+
+
+### Bug Fixes
+
+* darwin node file path ([bb04c36](https://github.com/etclabscore/pristine-typescript-electron-menubar/commit/bb04c36))
+* use node 10.16.0 ([40fd6bb](https://github.com/etclabscore/pristine-typescript-electron-menubar/commit/40fd6bb))
+* use nodenv ([4e6ba41](https://github.com/etclabscore/pristine-typescript-electron-menubar/commit/4e6ba41))
+
 ## [1.0.8](https://github.com/etclabscore/pristine-typescript-electron-menubar/compare/1.0.7...1.0.8) (2019-06-20)
 
 
