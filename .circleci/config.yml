@@ -46,11 +46,11 @@ jobs:
       - image: circleci/node:10
     steps:
       - attach_workspace:
-          at: /tmp/project
+          at: /project
       - checkout
       - restore_cache: *restore-deps-cache
-      - run: ls /tmp/project
-      - run: cp /tmp/project dist
+      - run: ls /project
+      - run: cp /project dist
       - run: npm install
       - run: npm install semantic-release @semantic-release/changelog @semantic-release/git @semantic-release/github @semantic-release/npm @semantic-release/commit-analyzer @semantic-release/release-notes-generator @qiwi/semantic-release-gh-pages-plugin
       - run: ./node_modules/.bin/semantic-release --dry-run
@@ -69,7 +69,7 @@ jobs:
       - run: npm install
       - run: npm run electron:build -- --win --ia32
       - persist_to_workspace:
-          root: /tmp/project/
+          root: /project
           paths:
             - dist/*
 
@@ -86,7 +86,7 @@ jobs:
       - run: npm install
       - run: npm run electron:build
       - persist_to_workspace:
-          root: /tmp/project/
+          root: /project
           paths:
             - dist/*
 
@@ -103,7 +103,7 @@ jobs:
       - run: npm install
       - run: npm run electron:build
       - persist_to_workspace:
-          root: /tmp/project/
+          root: /project
           paths:
             - dist/*
 
