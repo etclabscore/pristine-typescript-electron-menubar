@@ -12,7 +12,7 @@
     "electron": "npm run build:electron && NODE_ENV=development electron build/electron.js",
     "electron:build": "npm run build:electron && electron-builder --publish never",
     "lint": "tslint --fix -p .",
-    "test": "npm run lint && jest --coverage"
+    "test": "npm run lint && jest --coverage --passWithNoTests"
   },
   "author": "",
   "license": "Apache-2.0",
