@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/etclabscore/pristine-typescript-electron-menubar/compare/1.0.9...1.0.10) (2019-06-20)
+
+
+### Bug Fixes
+
+* **circleci:** run build before electron:build ([f2bbc19](https://github.com/etclabscore/pristine-typescript-electron-menubar/commit/f2bbc19))
+
 ## [1.0.9](https://github.com/etclabscore/pristine-typescript-electron-menubar/compare/1.0.8...1.0.9) (2019-06-20)
 
 
