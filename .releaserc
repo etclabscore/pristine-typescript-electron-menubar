@@ -19,16 +19,16 @@
       {
         "assets": [
           {
-            "path": "dist/electron-pristine-linux-x64-0.0.0-development.tar.gz",
-            "label": "Electron Pristine Linux distribution"
+            "path": "dist/*.tar.gz",
+            "label": "electron-pristine-linux.tar.gz"
           },
           {
-            "path": "dist/mac/*.dmg",
-            "label": "Electron Pristine Mac distribution"
+            "path": "dist/*.dmg",
+            "label": "electron-pristine-mac.dmg"
           },
           {
             "path": "dist/*.exe",
-            "label": "Electron Pristine Windows distribution"
+            "label": "electron-pristine-windows.exe"
           }
         ]
       }
