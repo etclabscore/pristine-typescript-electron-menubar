@@ -63,8 +63,7 @@
       "build/**/*"
     ],
     "directories": {
-      "buildResources": "build",
-      "app": "build"
+      "buildResources": "build"
     },
     "mac": {
       "category": "public.app-category.developer-tools"
