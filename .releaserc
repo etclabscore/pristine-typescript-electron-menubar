@@ -5,26 +5,34 @@
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
-    "@semantic-release/github",
-    "@semantic-release/git",
-    "@semantic-release/npm"
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          {
+            "path": "dist/electron-pristine-linux-x64-0.0.0-development.tar.gz",
+            "label": "Electron Pristine Linux distribution"
+          },
+          {
+            "path": "dist/mac/*.dmg",
+            "label": "Electron Pristine Mac distribution"
+          },
+          {
+            "path": "dist/*.exe",
+            "label": "Electron Pristine Windows distribution"
+          }
+        ]
+      }
+    ],
+    "@semantic-release/git"
   ],
   "verifyConditions": [
     "@semantic-release/changelog",
-    "@semantic-release/npm",
     "@semantic-release/git",
-    "@semantic-release/github",
-    "@qiwi/semantic-release-gh-pages-plugin"
+    "@semantic-release/github"
   ],
   "publish": [
-    "@semantic-release/github",
-    {
-      "path": "@qiwi/semantic-release-gh-pages-plugin",
-      "msg": "github pages release",
-      "src": "docs/",
-      "branch": "gh-pages"
-    },
-    "@semantic-release/npm"
+    "@semantic-release/github"
   ],
   "success": [
     "@semantic-release/github"
