@@ -40,6 +40,19 @@ jobs:
       - run: ./node_modules/.bin/codecov
       - save_cache: *save-deps-cache
 
+  release:
+    <<: *defaults
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - restore_cache: *restore-deps-cache
+      - run: ls dist
+      - run: npm install
+      - run: npm install semantic-release @semantic-release/changelog @semantic-release/git @semantic-release/github @semantic-release/npm @semantic-release/commit-analyzer @semantic-release/release-notes-generator @qiwi/semantic-release-gh-pages-plugin
+      - run: ./node_modules/.bin/semantic-release --dry-run
+      - save_cache: *save-deps-cache
+
   windowsbuild:
     <<: *defaults
     docker:
@@ -51,7 +64,11 @@ jobs:
           command: |
             echo 'export APP_VERSION_GIT_TAG=$(npm run --silent version)' >> $BASH_ENV # Redirect MY_ENV_VAR into $BASH_ENV
       - run: npm install
-      - run: npm run electron:build
+      - run: npm run electron:build -- --win --ia32
+      - persist_to_workspace:
+          root: ~/project/dist/
+          paths:
+            - dist/*
 
   macbuild:
     <<: *defaults
@@ -65,6 +82,10 @@ jobs:
             echo 'export APP_VERSION_GIT_TAG=$(npm run --silent version)' >> $BASH_ENV # Redirect MY_ENV_VAR into $BASH_ENV
       - run: npm install
       - run: npm run electron:build
+      - persist_to_workspace:
+          root: ~/project/dist/
+          paths:
+            - dist/*
 
   linuxbuild:
     <<: *defaults
@@ -78,12 +99,10 @@ jobs:
             echo 'export APP_VERSION_GIT_TAG=$(npm run --silent version)' >> $BASH_ENV # Redirect MY_ENV_VAR into $BASH_ENV
       - run: npm install
       - run: npm run electron:build
-
-  release:
-    docker:
-      - image: circleci/node:10
-    steps:
-      - run: echo "hello world"
+      - persist_to_workspace:
+          root: ~/project/dist
+          paths:
+            - dist/*
 
 workflows:
   version: 2
