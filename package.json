@@ -58,11 +58,13 @@
     "appId": "electron.pristine.etclabscore",
     "artifactName": "${productName}-${os}-${arch}-${env.APP_VERSION_GIT_TAG}.${ext}",
     "compression": "normal",
+    "asar": true,
     "files": [
       "build/**/*"
     ],
     "directories": {
-      "buildResources": "assets"
+      "buildResources": "build",
+      "app": "build"
     },
     "mac": {
       "category": "public.app-category.developer-tools"
