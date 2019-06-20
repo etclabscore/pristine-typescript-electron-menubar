@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/etclabscore/pristine-typescript-electron-menubar/compare/1.0.3...1.0.4) (2019-06-20)
+
+
+### Bug Fixes
+
+* **circleci:** remove unneeded file ([ecb8c67](https://github.com/etclabscore/pristine-typescript-electron-menubar/commit/ecb8c67))
+
 ## [1.0.3](https://github.com/etclabscore/pristine-typescript-electron-menubar/compare/1.0.2...1.0.3) (2019-06-20)
 
 
