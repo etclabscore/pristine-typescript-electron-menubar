@@ -74,7 +74,7 @@ jobs:
   macbuild:
     <<: *defaults
     macos:
-      xcode: "10.0.0"
+      xcode: "10.2.1"
     steps:
       - checkout
       - run:
