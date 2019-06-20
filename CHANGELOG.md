@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/etclabscore/pristine-typescript-electron-menubar/compare/1.0.6...1.0.7) (2019-06-20)
+
+
+### Bug Fixes
+
+* include node moculdes and revert to build resources assets ([463b246](https://github.com/etclabscore/pristine-typescript-electron-menubar/commit/463b246))
+
 ## [1.0.6](https://github.com/etclabscore/pristine-typescript-electron-menubar/compare/1.0.5...1.0.6) (2019-06-20)
 
 
