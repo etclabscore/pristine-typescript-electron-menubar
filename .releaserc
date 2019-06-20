@@ -18,14 +18,12 @@
       "@semantic-release/github",
       {
         "assets": [
-          "!dist/*.dmg.blockmap",
-          "!dist/default.*.dmg",
           {
             "path": "dist/*.tar.gz",
             "label": "electron-pristine-linux.tar.gz"
           },
           {
-            "path": "dist/*.dmg",
+            "path": "dist/electron-pristine-mac*.dmg",
             "label": "electron-pristine-mac.dmg"
           },
           {
