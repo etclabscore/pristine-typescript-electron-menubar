@@ -19,6 +19,7 @@
       {
         "assets": [
           "!dist/*.dmg.blockmap",
+          "!dist/default.*.dmg",
           {
             "path": "dist/*.tar.gz",
             "label": "electron-pristine-linux.tar.gz"
