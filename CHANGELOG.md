@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/etclabscore/pristine-typescript-electron-menubar/compare/1.0.0...1.0.1) (2019-06-20)
+
+
+### Bug Fixes
+
+* **semantic release:** releaserc github asset publish ([33916e5](https://github.com/etclabscore/pristine-typescript-electron-menubar/commit/33916e5))
+
 # 1.0.0 (2019-06-20)
 
 
