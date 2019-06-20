@@ -18,16 +18,17 @@
       "@semantic-release/github",
       {
         "assets": [
-          "!dist/*.dmg.blockmap",
-          "!dist/default.*.dmg",
           {
             "path": "dist/*.tar.gz",
             "label": "electron-pristine-linux.tar.gz"
           },
-          {
-            "path": "dist/*.dmg",
-            "label": "electron-pristine-mac.dmg"
-          },
+          [
+            "dist/*.dmg",
+            {
+              "path": "!dist/**/default.*.dmg",
+              "label": "electron-pristine-mac.dmg"
+            }
+          ],
           {
             "path": "dist/*.exe",
             "label": "electron-pristine-windows.exe"
