@@ -45,14 +45,13 @@ jobs:
     docker:
       - image: circleci/node:10
     steps:
+      - checkout
       - attach_workspace:
           at: ~/project
-      - checkout
       - restore_cache: *restore-deps-cache
       - run: ls
-      - run: npm install
       - run: npm install semantic-release @semantic-release/changelog @semantic-release/git @semantic-release/github @semantic-release/npm @semantic-release/commit-analyzer @semantic-release/release-notes-generator @qiwi/semantic-release-gh-pages-plugin
-      - run: ./node_modules/.bin/semantic-release --dry-run
+      - run: ./node_modules/.bin/semantic-release
       - save_cache: *save-deps-cache
 
   windowsbuild:
