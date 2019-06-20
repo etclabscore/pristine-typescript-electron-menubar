@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/etclabscore/pristine-typescript-electron-menubar/compare/1.0.7...1.0.8) (2019-06-20)
+
+
+### Bug Fixes
+
+* bump xcode version for circle ([59f2f25](https://github.com/etclabscore/pristine-typescript-electron-menubar/commit/59f2f25))
+
 ## [1.0.7](https://github.com/etclabscore/pristine-typescript-electron-menubar/compare/1.0.6...1.0.7) (2019-06-20)
 
 
