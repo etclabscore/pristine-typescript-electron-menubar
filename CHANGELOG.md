@@ -1,3 +1,11 @@
+## [1.0.5](https://github.com/etclabscore/pristine-typescript-electron-menubar/compare/1.0.4...1.0.5) (2019-06-20)
+
+
+### Bug Fixes
+
+* **circle:** release path for mac ([16ac3db](https://github.com/etclabscore/pristine-typescript-electron-menubar/commit/16ac3db))
+* **circleci:** github dist release ([1c98a2a](https://github.com/etclabscore/pristine-typescript-electron-menubar/commit/1c98a2a))
+
 ## [1.0.4](https://github.com/etclabscore/pristine-typescript-electron-menubar/compare/1.0.3...1.0.4) (2019-06-20)
 
 
