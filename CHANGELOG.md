@@ -1,3 +1,11 @@
+## [1.0.6](https://github.com/etclabscore/pristine-typescript-electron-menubar/compare/1.0.5...1.0.6) (2019-06-20)
+
+
+### Bug Fixes
+
+* build asset dir ([34519b9](https://github.com/etclabscore/pristine-typescript-electron-menubar/commit/34519b9))
+* electron release build ([7cb74c4](https://github.com/etclabscore/pristine-typescript-electron-menubar/commit/7cb74c4))
+
 ## [1.0.5](https://github.com/etclabscore/pristine-typescript-electron-menubar/compare/1.0.4...1.0.5) (2019-06-20)
 
 
