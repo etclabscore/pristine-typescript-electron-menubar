@@ -29,9 +29,17 @@
     "electron": "^5.0.4"
   },
   "dependencies": {
+    "@qiwi/semantic-release-gh-pages-plugin": "^1.10.0",
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/commit-analyzer": "^6.2.0",
+    "@semantic-release/git": "^7.0.12",
+    "@semantic-release/github": "^5.4.0",
+    "@semantic-release/npm": "^5.1.9",
+    "@semantic-release/release-notes-generator": "^7.2.0",
     "menubar": "^6.0.5",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "semantic-release": "^15.13.16"
   },
   "browserslist": {
     "production": [
@@ -53,7 +61,7 @@
     "files": [
       "build/**/*"
     ],
-    "directories":{
+    "directories": {
       "buildResources": "assets"
     },
     "mac": {
