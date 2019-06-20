@@ -77,11 +77,8 @@ jobs:
       xcode: "10.2.1"
     steps:
       - checkout
-      - run:
-          name: "Update Node.js and npm"
-          command: |
-            curl -sSL "https://nodejs.org/dist/v10.16.0/node-v10.16.0-darwin-x64.tar.gz" | sudo tar --strip-components=3 -xJ -C /usr/local/bin/ node-v10.16.0-darwin-x64/bin/node
-            curl https://www.npmjs.com/install.sh | sudo bash
+      - run: brew install nodenv
+      - run: eval "$(nodenv init -)"
       - run:
           name: "Setup custom environment variables"
           command: |
