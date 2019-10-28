@@ -34,7 +34,7 @@
     "@semantic-release/commit-analyzer": "^6.2.0",
     "@semantic-release/git": "^7.0.12",
     "@semantic-release/github": "^5.4.0",
-    "@semantic-release/npm": "^5.1.9",
+    "@semantic-release/npm": "^5.3.1",
     "@semantic-release/release-notes-generator": "^7.2.0",
     "menubar": "^6.0.5",
     "react": "^16.8.6",
